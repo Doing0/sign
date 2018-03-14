@@ -7,7 +7,7 @@
 composer require doing/sign dev-master
 ~~~
 ## 使用步骤
-> 前提在服务端调用makeKey和doSign时php文件头部已应用命名空间use Sign\Sign;
+> 前提:在服务端调用makeKey和doSign时php文件头部已引用命名空间use Sign\Sign;
 
 ### 1.管理人员在Sign.php配置类的属性$appId最好是英文单词
 ### 2.服务端调用以下生成器 生成公钥和私钥
@@ -32,7 +32,7 @@ $appId = 'appid';
 ~~~
 //通过读取3.1中header中的参数publicKey和appId调用以下方法验证
 $res = Sign::instance()->doSign($publicKey,$appId);
-print_r($keys);die;
+print_r($res);die;
 ~~~
 ### 4.验证结果
 $res验证通过返回字符串True,验证失败返回字符串False 并返给3.1
