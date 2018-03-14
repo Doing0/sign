@@ -13,9 +13,9 @@ namespace Sign;
 
 class Sign {
     //appId
-    protected $appId = 'tingyibin';
+    protected $appId = '';
     //私钥
-    protected $privateKey = '0.121aa138025522518985d0a3f04222e';
+    protected $privateKey = '';
     #实例化对象
     private static $instance;
 
