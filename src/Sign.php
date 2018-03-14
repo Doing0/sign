@@ -13,7 +13,7 @@ namespace Sign;
 
 class Sign {
     //appId
-    protected $appId = '';
+    protected $appId = 'appid';
     //私钥
     protected $privateKey = '';
     #实例化对象
@@ -64,6 +64,7 @@ class Sign {
      */
     public function doSign($priveKey, $appId)
     {
+        #appId验证
         #解密签名过程 获取签名字符串
         $signStr = $this->getSignStr($priveKey, $appId);
         #对比验证
@@ -116,7 +117,7 @@ class Sign {
      */
     private function checkSign($signStr)
     {
-        if ($signStr === $this->privateKey)
+        if ($signStr === $this->privateKey.$this->appId)
         {
             return 'True';
         }else
@@ -148,7 +149,7 @@ class Sign {
             while ($j < 0) $j += 64;
             $tmp .= $chars[$j];
         }
-        return trim(base64_decode($tmp), $appId);
+        return trim(base64_decode($tmp), $appId).$appId;
     }//pf
 
 
