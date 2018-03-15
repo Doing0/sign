@@ -1,7 +1,7 @@
 {
     "name": "doing/sign",
     "description": "通过公钥、私钥和appId进行加密、解密和签名的一种加密类:主要可以运用到接口调用授权中",
-    "keywords": ["key", "password","sign","publicKey","privateKey,OAuth"],
+    "keywords": ["key", "password","sign","publicKey","privateKey","OAuth"],
     "type": "library",
     "license": "MIT",
     "authors": [
