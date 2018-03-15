@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="344c9018-21b6-4991-b2ad-bddb2712dfdd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,25 +14,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-515">
-                <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
+              <first_editor relative-caret-position="471">
+                <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
                 <folding />
               </first_editor>
               <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="composer.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/composer.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="306">
-              <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -45,8 +36,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/Sign.php" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/composer.json" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -130,7 +121,7 @@
       <updated>1521007769583</updated>
       <workItem from="1521007772792" duration="1709000" />
       <workItem from="1521009583303" duration="3190000" />
-      <workItem from="1521076658312" duration="2365000" />
+      <workItem from="1521076658312" duration="2512000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1521008225807</created>
@@ -209,11 +200,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521083911091</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="composer.json错误">
+      <created>1521083985100</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1521083985100</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7264000" />
+    <option name="totallyTimeSpent" value="7411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="501" width="1382" height="754" extended-state="6" />
@@ -282,22 +280,22 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-515">
-            <caret line="21" column="34" lean-forward="false" selection-start-line="21" selection-start-column="34" selection-end-line="21" selection-end-column="34" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/composer.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
           <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="471">
+            <caret line="61" column="5" lean-forward="false" selection-start-line="61" selection-start-column="5" selection-end-line="61" selection-end-column="5" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

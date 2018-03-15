@@ -42,24 +42,24 @@ $res验证通过返回字符串True,验证失败返回字符串False 并返给3.
 
 ## 使用步骤
 > 前提:在服务端调用getCode和check时php文件头部已引用命名空间use Sign\OAuth;
-### 1.在使用之前须操作描述一中的步骤1和2配置号appId以及生成并配置好对应的公钥和私钥
-### 2.调用接口者获取一次性code码
-#### 2.1调用接口者通过在header上携带参数公钥和appId去调服务器对应接口去获取一次性code码
+### 1 在使用之前须操作描述一中的步骤1和2配置号appId以及生成并配置好对应的公钥和私钥
+### 2 调用接口者获取一次性code码
+#### 2.1 调用接口者通过在header上携带参数公钥和appId去调服务器对应接口去获取一次性code码
 #### 2.2 服务器通过header获取对应参数生成一次性code码并返回
 ~~~
  $code = OAuth::instance()->getCode($publicKey, $appId);
 ~~~
 
-###3 调用接口者获取access_token
-####3.1 调用接口者通过携带参数code请求相应接口获取access_token
-####3.2 服务器获取到code参数并去生成access_token 并返回
+### 3 调用接口者获取access_token
+#### 3.1 调用接口者通过携带参数code请求相应接口获取access_token
+#### 3.2 服务器获取到code参数并去生成access_token 并返回
 ~~~
  $accessToken = OAuth::instance()->getAccessToken($code);
 ~~~
 
 #### 4 调用API的权限验证
-####4.1调用接口者每次在调用项目API时header上都要携带access_token参数
-####4.2服务器每次相应请求时都要去判断access_toen是否有权限
+#### 4.1 调用接口者每次在调用项目API时header上都要携带access_token参数
+#### 4.2 服务器每次相应请求时都要去判断access_toen是否有权限
 ~~~
 //$res 验证通过为true其他情况全部已抛出异常的形式处理(自行封装)
 $res = OAuth::instance()->check();
