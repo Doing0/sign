@@ -13,11 +13,22 @@ namespace Sign;
 
 class Sign {
     //appId
-    protected $appId = 'appid';
+    protected $appId;
     //私钥
-    protected $privateKey = '';
+    protected $privateKey;
     #实例化对象
     private static $instance;
+
+    /** 简述:初始化获取参数
+     *
+     * @params
+     *
+     */
+    public function __construct()
+    {
+        $this->appId = SignConfig::APPID;
+        $this->privateKey = SignConfig::PRIVATEKEY;
+    }//pf
 
 
     /**入口实例化对象
@@ -39,76 +50,24 @@ class Sign {
     }
 
 
-    /**生成私钥和配套的公钥
-     * @return mixed
-     *
-     */
-    public function makeKey()
-    {
-        #私钥
-        $this->privateKey = $this->makePriveKey();
-        #公钥
-        $publicKey = $this->makePublicKey();
-        #拼接数据返回
-        $data['privateKey'] = $this->privateKey;
-        $data['publicKey'] = $publicKey;
-        return $data;
-
-    }
-
     /**签名认证
      *
-     * @param $priveKey [私钥]
+     * @param $publicKey [公钥]
      * @param $appId [appId]
+     *
      * @return string true|false
      */
-    public function doSign($priveKey, $appId)
+    public function doSign($publicKey, $appId)
     {
-        #appId验证
-        #解密签名过程 获取签名字符串
-        $signStr = $this->getSignStr($priveKey, $appId);
+        #解密签名过程 获取签名字符串 有拼接appId
+        $signStr = $this->getSignStr($publicKey, $appId);
         #对比验证
-        return $this->checkSign($signStr);
+        $res = $this->checkSign($signStr);
+        if ($res == true) return true;
+        //TODO 验证通过和未通过的逻辑可自己根据项目写
+
     }
 
-    /** 简述:生成私钥
-     * @return string
-     */
-    private function makePriveKey()
-    {
-        //生成唯一uniqid 前缀时间戳,返回值末尾的更多的熵到23位
-        //在srt_shuffle随机打乱字符串;
-        return str_shuffle(uniqid(time(), true));
-    }//pf
-
-    /** 简述:根据私钥生成配套的公钥
-     * @return string
-     */
-    private function makePublicKey()
-    {
-        $privateKey = $this->privateKey;
-        $appId = $this->appId;
-        $privateKey = $privateKey . $appId;
-        $chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789-=+";
-        $nh = rand(0, 64);
-        $ch = $chars[$nh];
-        $mdKey = md5($appId . $ch);
-        $mdKey = substr($mdKey, $nh % 8, $nh % 8 + 7);
-        $privateKey = base64_encode($privateKey);
-        $tmp = '';
-        $i = 0;
-        $j = 0;
-        $k = 0;
-        for ($i = 0; $i < strlen($privateKey); $i++)
-        {
-            $k = $k == strlen($mdKey) ? 0 : $k;
-            $j = ($nh + strpos($chars, $privateKey[$i]) + ord($mdKey[$k++])) %
-                64;
-            $tmp .= $chars[$j];
-        }
-        return urlencode(base64_encode($ch . $tmp));
-
-    }//pf
 
     /** 简述:验证
      * @params $signStr签名字符串
@@ -117,7 +76,7 @@ class Sign {
      */
     private function checkSign($signStr)
     {
-        if ($signStr === $this->privateKey.$this->appId)
+        if ($signStr === $this->privateKey . $this->appId)
         {
             return 'True';
         }else
@@ -149,7 +108,7 @@ class Sign {
             while ($j < 0) $j += 64;
             $tmp .= $chars[$j];
         }
-        return trim(base64_decode($tmp), $appId).$appId;
+        return trim(base64_decode($tmp), $appId) . $appId;
     }//pf
 
 
