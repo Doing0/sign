@@ -41,7 +41,7 @@ $res验证通过返回字符串True,验证失败返回字符串False 并返给3.
 ## 描述二:签名+授权(仅能在thinkphp5.0上使用)
 
 ## 使用步骤
-> 前提:在服务端调用makeKey和doSign时php文件头部已引用命名空间use Sign\OAuth;
+> 前提:在服务端调用getCode和check时php文件头部已引用命名空间use Sign\OAuth;
 ### 1.在使用之前须操作描述一中的步骤1和2配置号appId以及生成并配置好对应的公钥和私钥
 ### 2.调用接口者获取一次性code码
 #### 2.1调用接口者通过在header上携带参数公钥和appId去掉服务器对应接口去获取一次性code码

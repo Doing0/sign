@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="344c9018-21b6-4991-b2ad-bddb2712dfdd" name="Default" comment="" />
+    <list default="true" id="344c9018-21b6-4991-b2ad-bddb2712dfdd" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -10,26 +13,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Sign.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Sign.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-272">
-              <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
-              <folding>
-                <element signature="e#6#117#0#PHP" expanded="true" />
-                <element signature="e#672#958#0#PHP" expanded="true" />
-                <element signature="e#1082#1290#0#PHP" expanded="true" />
-                <element signature="e#1342#1508#0#PHP" expanded="true" />
-                <element signature="e#1571#2385#0#PHP" expanded="true" />
-                <element signature="e#2501#2705#0#PHP" expanded="true" />
-                <element signature="e#2764#3547#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -123,7 +107,7 @@
       <updated>1521007769583</updated>
       <workItem from="1521007772792" duration="1709000" />
       <workItem from="1521009583303" duration="3190000" />
-      <workItem from="1521076658312" duration="681000" />
+      <workItem from="1521076658312" duration="1916000" />
     </task>
     <task id="LOCAL-00001" summary="初始化项目">
       <created>1521008225807</created>
@@ -174,11 +158,18 @@
       <option name="project" value="LOCAL" />
       <updated>1521020602069</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="授权+签名文档">
+      <created>1521083464409</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1521083464410</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5580000" />
+    <option name="totallyTimeSpent" value="6815000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1912" y="501" width="1382" height="754" extended-state="6" />
@@ -216,7 +207,8 @@
     <MESSAGE value="修改文档和appId验证" />
     <MESSAGE value="文档错别字修改" />
     <MESSAGE value="增加流程图" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加流程图" />
+    <MESSAGE value="授权+签名文档" />
+    <option name="LAST_COMMIT_MESSAGE" value="授权+签名文档" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -230,16 +222,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="301">
-            <caret line="34" column="12" lean-forward="false" selection-start-line="34" selection-start-column="12" selection-end-line="34" selection-end-column="12" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/流程.png">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -247,17 +229,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Sign.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-272">
-          <caret line="1" column="3" lean-forward="true" selection-start-line="1" selection-start-column="3" selection-end-line="1" selection-end-column="3" />
+        <state relative-caret-position="578">
+          <caret line="29" column="50" lean-forward="false" selection-start-line="29" selection-start-column="40" selection-end-line="29" selection-end-column="50" />
           <folding>
             <element signature="e#6#117#0#PHP" expanded="true" />
-            <element signature="e#672#958#0#PHP" expanded="true" />
-            <element signature="e#1082#1290#0#PHP" expanded="true" />
-            <element signature="e#1342#1508#0#PHP" expanded="true" />
-            <element signature="e#1571#2385#0#PHP" expanded="true" />
-            <element signature="e#2501#2705#0#PHP" expanded="true" />
-            <element signature="e#2764#3547#0#PHP" expanded="true" />
+            <element signature="e#616#797#0#PHP" expanded="true" />
+            <element signature="e#930#1207#0#PHP" expanded="true" />
+            <element signature="e#1320#1526#0#PHP" expanded="true" />
+            <element signature="e#1585#2370#0#PHP" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="97">
+            <caret line="43" column="24" lean-forward="false" selection-start-line="43" selection-start-column="24" selection-end-line="43" selection-end-column="24" />
+            <folding />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
